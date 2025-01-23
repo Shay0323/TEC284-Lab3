@@ -1,5 +1,6 @@
 void setup() {
   pinMode(A6, INPUT);
+  pinMode(4, OUTPUT);
   int lightlevel = analogRead(A6);
   Serial.begin(9600);
   Serial.println(lightlevel);
