@@ -1,10 +1,12 @@
 void setup() {
   pinMode(A6, INPUT);
+  pinMode(4, OUTPUT);
   int lightlevel = analogRead(A6);
   Serial.begin(9600);
   Serial.println(lightlevel);
   if (lightlevel < 100) {
     Serial.println("Its really dark!");
+    digitalWrite(4, HIGH);
   }
   else if (lightlevel < 200) {
     Serial.println("Its dim in here");
